@@ -542,11 +542,23 @@
                 e.clearSelection();
                 // savePicture($("#img").attr("src"))
 
+                if (window.plus) {
+                    alert('1')
+                    plusReady();
+                } else {
+                    alert('2')
+                    document.addEventListener('plusready', plusReady, false);
+                }
+
+            });
+
+
+            function plusReady() {
+                alert('3')
                 plus.gallery.save($("#img").attr("src"), function () {
                     alert("保存图片到相册成功");
                 });
-
-            });
+            }
 
             var triggerEvent = "touchstart";
             function savePicture(Url) {
