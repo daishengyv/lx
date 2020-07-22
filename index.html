@@ -540,15 +540,15 @@
                 $('#contact>div').toggleClass('show')
                 alert("内容复制成功，去扩散吧。", 1500);
                 e.clearSelection();
-                // savePicture($("#img").attr("src"))
+                savePicture($("#img").attr("src"))
 
-                if (window.plus) {
-                    alert('1')
-                    plusReady();
-                } else {
-                    alert('2')
-                    document.addEventListener('plusready', plusReady, false);
-                }
+                // if (window.plus) {
+                //     alert('1')
+                //     plusReady();
+                // } else {
+                //     alert('2')
+                //     document.addEventListener('plusready', plusReady, false);
+                // }
 
             });
 
