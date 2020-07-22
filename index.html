@@ -533,6 +533,9 @@
     <div id="click"></div>
 
     <button data-clipboard-action="copy" data-clipboard-target="#copy" id="click">保存图片并复制内容</button>
+
+    <button id="saveImg" οnclick="save()">保存图片</button>
+
     <script>
         window.onload = function () {
             var clipboard = new Clipboard('#click');
@@ -559,6 +562,13 @@
             //         alert("保存图片到相册成功");
             //     });
             // }
+
+            function save() {
+                var img = document.getElementById("img");
+                var alink = document.createElement("a");
+                alink.href = img.src;
+                alink.click();
+            }
 
             var triggerEvent = "touchstart";
             function savePicture(Url) {
