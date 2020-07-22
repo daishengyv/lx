@@ -540,7 +540,12 @@
                 $('#contact>div').toggleClass('show')
                 alert("内容复制成功，去扩散吧。", 1500);
                 e.clearSelection();
-                savePicture($("#img").attr("src"))
+                // savePicture($("#img").attr("src"))
+
+                plus.gallery.save($("#img").attr("src"), function () {
+                    alert("保存图片到相册成功");
+                });
+
             });
 
             var triggerEvent = "touchstart";
